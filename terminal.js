@@ -95,7 +95,7 @@ var Terminal = Terminal || function(containerId) {
   //  'mv', 'open', 'pwd', 'rm', 'rmdir', 'theme', 'version', 'who', 'wget'
   //];
   const CMDS_ = [
-      'about', 'pub', 'photo', 'clear', 'help',
+      'about', 'work', 'life', 'clear', 'help',
   ];
   const THEMES_ = ['default', 'cream'];
 
@@ -332,43 +332,19 @@ var Terminal = Terminal || function(containerId) {
         case 'ver':
           output(VERSION_);
           break;
-        case 'pub':
-          output('<h2>Publications</h2>');
-          output('<p>');
-          output('<b>Extract more concurrency from distributed transactions</b>');
-          output('</b>');
-          output('<br>');
-          output('Shuai Mu, Yang Cui, Yang Zhang, Wyatt Lloyd, and Jinyang Li');
-          output('<br>');
-          output('In Proceedings of the 11th Symposium on Operating Systems Design and Implementation (OSDI), 2014.');
-          output('</p>');
-        
-          output('<p>');
-          output('<b>When paxos meets erasure code: reduce network and storage cost in state machine replication.</b>');
-          output('<br>');
-          output('Shuai Mu, Kang Chen, Yongwei Wu, and Weimin Zheng.');
-          output('<br>');
-          output('In Proceedings of the 23rd International Symposium on High-performance Parallel and Distributed computing (HPDC), 2014.');
-          output('</p>');
+        case 'work':
+          output('<h2>Work</h2>');
+          output('<p>2012-Now Software developer at Excosoft AB. </p>');
+          output('<p>2011 Co-founder and Network architecture at Degoo backup AB. </p>');
+          output('<p>2010-2011 Software developer at Prez capital AB. </p>');
           break;
-    
         case 'about':
-          output('<h2>Shuai Mu 牟帅</h2>');
-          output('<p>');
-          output('715 Broadway Room 719<br>');
-          output('New York, NY 10003<br>');
-          output('Contact: shuai at cs nyu edu<br>');
-          output('Github: <a href="http://github.com/msmummy" target="_blank">github.com/msmummy</a><br>')
-          output('</p>');
-
-          output('<p>I am an irrelevant researcher and a slow coder visiting New York University, I am also suffering a Permanent-head-Damage from Tsinghua University. I used to attend China Agricultural University, where I ate a few experimental genetically modified cucumbers and spent a lot of time in the defense of the ancients. </p>');
-          output('<p>I love to read (but sadly often cannot fully understand) system research papers appeared in OSDI/SOSP/NSDI. But luckily I have two very kind advisors <a href="http://www.news.cs.nyu.edu/~jinyang/" target="_blank">Jinyang</a> and <a href="http://www.cs.princeton.edu/~wlloyd/" target="_blank">Wyatt</a>, who are always very patient with my stupid questions. </p>');
-          output('<p>This lovely terminal emulator is from Eric Bidelman &lt;ericbidelman@chromium.org&gt; </p>');
+          output('<h2>Qinjin Wang</h2>');
+          output('<p>I am a Software developer at Excosoft AB.</p>');
           break;
-        case 'photo':
-          var idx = Math.floor(Math.random() * 10);
-          var tip = idx == 0 ? "Ok..ok..This is me...": "Lol...Why do you want to see my photo?"; 
-          output('<p><a><img src="./photo/sealion' + idx + '.jpg" width=600></a><br><a>' + tip + '</a></p>');
+        case 'life':
+          var idx = Math.floor(Math.random() * 0);
+          output('<p><a><img src="./photo/' + idx + '.jpg" width=600></a><br></p>');
           break;
         default:
           if (cmd) {
@@ -577,7 +553,7 @@ var Terminal = Terminal || function(containerId) {
 
   return {
     initFS: function(persistent, size) {
-        output('<div>Welcome to Shuai Mu\'s home-terminal!' +
+        output('<div>Welcome to Qinjin\'s home-terminal!' +
              '(v' + VERSION_ + ')</div>');
       output((new Date()).toLocaleString());
       output('<p>Please type "help" for available commands</p>');
