@@ -1,7 +1,7 @@
 {
   "name": "Qinjin Wang",
   "description": "",
-  "version": "0.0.1",
+  "version": "1.0",
   "icons": {
     "16": "terminal-icon.png",
     "128": "terminal-icon.png"
@@ -10,7 +10,7 @@
   /*"urls": [
     "*://localhost/"
   ],*/
-  "launch_url": "terminal.html",
+  "launch_url": "index.html",
   "permissions": [
     "unlimitedStorage"
   ]

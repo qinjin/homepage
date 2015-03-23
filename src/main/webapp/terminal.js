@@ -343,8 +343,8 @@ var Terminal = Terminal || function(containerId) {
           output('<p>I am a Software developer at Excosoft AB.</p>');
           break;
         case 'life':
-          var idx = Math.floor(Math.random() * 0);
-          output('<p><a><img src="./photo/' + idx + '.jpg" width=600></a><br></p>');
+          var idx = Math.floor(Math.random() * 5);
+          output('<p><a><img src="photo/' + idx + '.jpg" width=600></a><br></p>');
           break;
         default:
           if (cmd) {
@@ -553,10 +553,9 @@ var Terminal = Terminal || function(containerId) {
 
   return {
     initFS: function(persistent, size) {
-        output('<div>Welcome to Qinjin\'s home-terminal!' +
-             '(v' + VERSION_ + ')</div>');
+        output('<div>Welcome to Qinjin\'s home-terminal.</div>');
       output((new Date()).toLocaleString());
-      output('<p>Please type "help" for available commands</p>');
+      output('<p>Please type "help" for available commands...</p>');
       
       return;
 
